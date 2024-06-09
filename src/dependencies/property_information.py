@@ -3,6 +3,7 @@ from urllib.parse import quote
 import time
 import json
 import datetime
+from src import config
 
 
 def get_last_12_months():
@@ -178,7 +179,7 @@ def get_air_polution(lon, lat):
 
 def get_restaraunts(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=restaurant&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=restaurant&key={config.google_api_key}"
 
     payload = {}
     headers = {}
@@ -190,7 +191,7 @@ def get_restaraunts(lon, lat):
 
 def get_post_office(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=post_office&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=post_office&key={config.google_api_key}"
 
     payload = {}
     headers = {}
@@ -202,7 +203,7 @@ def get_post_office(lon, lat):
 
 def get_gyms(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=gym&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=gym&key={config.google_api_key}"
 
     payload = {}
     headers = {}
@@ -214,7 +215,7 @@ def get_gyms(lon, lat):
 
 def get_airport(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=airport&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=airport&key={config.google_api_key}"
 
     payload = {}
     headers = {}
@@ -226,7 +227,7 @@ def get_airport(lon, lat):
 
 def get_supermarkets(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=supermarket&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=supermarket&key={config.google_api_key}"
 
     payload = {}
     headers = {}
@@ -238,7 +239,7 @@ def get_supermarkets(lon, lat):
 
 def get_cafes(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=cafe&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=cafe&key={config.google_api_key}"
 
     payload = {}
     headers = {}
