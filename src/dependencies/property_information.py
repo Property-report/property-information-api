@@ -26,7 +26,7 @@ def get_last_12_months():
 def get_when_fresh_oauth():
     url = "https://id.api.whenfresh.com/oauth2/token"
 
-    payload = f"client_id=r5e6j0k1oevsfgmb9secod9qd&grant_type=refresh_token&refresh_token={config.whenfresh_refresh_token}"
+    payload = "client_id=r5e6j0k1oevsfgmb9secod9qd&grant_type=refresh_token&refresh_token=eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.A0mD2G-ZyjMWqJymag9CzU-60dgSpsTJKrPVdYkMecyGRpNKsh5pJrz5ROs4x2lSQX3uh-p9F5AIKY_9lU_0_acsy97YPQnWljXxMrcGwXIkfESVo6Zs-EvBlvlgxoHFeP4DrsvmFAv2WnnTVjNuNaNnYHgY-RBtD_cVahEq3SSiAy6ZLAfz6_EjsmLktzFqXOeLgz0G_L3Z2GCaP_ditUWDMc7DA0VNi7VxSt6oJNsJKqj7GJLH78-qHjT0ciAbWEMV4Zi_kplC_uE7nEHvckWK6V8hYAlWPsZDNDyYNPYxBUkYqaeplqf4m5uhRKZ_X2qetxsJ1Y6uh5WzPK6hag.1VymFNFmbhdOP_tj.lQn40Ouk6lCTnJX8Fh0pHNf2LVwjMyVsQCrwnlDL8DW-kRWg-wUO5kXSpBPLZP--5VLz8XEv-IGUwFADwPcAiS9zD_vF2hL8NEfnaODuIIETT-yDGxHvZ7IUI_sOxGQ8po20GZh46EDz9NeZnUDGqu8F8fAAQ1Xjn-wsTsBVYhHrURl0OWRO3lWwSuBXPC3bJXoxfcqkilP_mSwxMLlN5VBZU_Evzi7GRUD2Od0TOBPv_M4Tls-6uny02LHKSwLaPHHKk3IUhxKXCAyPajhbXSTOHeytwpNUc0--NqEjak_pSMqjAKsC4rxJV_8d2jgrZi-qTjI9-Ac3n1_zuo73LFy4T7nSOcjsYb2oDaTz6FTitn3JfdFWds2ygrIa_o0EQZmkopvyxBakrf1kWDd-1NlQqSTJaAxONiMImuJ-1650_c089DWhMEgmgOQKzm4YCGNpE_y9NEtye2DNAw1T-BPRwS3uQGGg93QmcqlOtYu6fwg07v2KaHtF5GVWM1BQLSuTV19Br-HWr89OMjz9Ipk6Qif-puLZ6kPxD8CpgZip4yczx4v6oGJrIvoQ-c68xQEJfUvPS6FPbLkG8_NlzjRgcIasqGtr3Z7xv1mvHgfLVazy-0AhMshMQJuIIgHXXHVgHa-YiYNO8OdvdxY4kWeUDpgUxAhtKpIoSHjVhwpuBS_fkigF9-qadf12Ry5cRFo2mfVM7_4Bp8_9SwO-oCXUx0mzaMHMvkuWhfjkgELLLtJ1rjcSYrCS3h8AsTTA8D0Hl2Ai4FM1J2lp_WO7U5vVEHFgUwbmBQvUuG_CTnMVfkzeUTdc0phBjQ4XG0Fcxncy79H49VygNbH3aYF94gU4_nvO0x_I39FeJNggmIvUOZCrhPkLt6U1TWKDyFSr2HmbTiCKxcRy0ag-Jj94b4lu97ZKQsY__b-j--HpQ7C4rShyEkvtzxeVjRVqXOpGG5NLgGUVOeVlam7VaBAG3bNqv9Iorgy9CUqxgqDLckhj4Vp2dICuav5lbQwRfqUL_9mHlm7Bi11m8A1svpGlZW3ihN86ymNx5BVjYG-4XV6R2pEZGfbwcnH0NlySTJxky3-MKtjqsnjz_XWAr7rD8aFlvGQsBpRfTD2ZvlvaI5bBxfvgipFNpcXSOSUZV1iTo783ErtvR6w2sewg7KBusORTLgFi23pn9a96vE6lzrxyGip8jjA-D0nZxlix49Su6ujzxrnoCw5PjzQcodGjH6KaBUVZkisUh4c2IcF8fgyNofGw84yn7JW0jcvKulUHl2WXLbQNcSLry3PFhNbYJO7IJu6AfX2kb8FeZOmXU8zxxMcVCOuOEewEfEDkjCZp5jtWS218xkZgkCCNdB0wIq8O7c2pMrnou1uwPG6QJ9264ePCnkSqwtcWzpnyor2dH1DpSoIR_pUkSRBwbupmE4OpxUm6LYC78UC_AD7oYh5HltHWF_abGPQlI3ngC8xQadtn3RivgKeEqDd9i1KCStkYlIRl-tbQ2B8aK4BBGgtULsB8Db1Y8wewONaBVLegY8U.wGZsV5rAvlZpnCTbpSoHkQ%0A"
     headers = {
         'accept': "application/json",
         'content-type': "application/x-www-form-urlencoded",
@@ -58,13 +58,13 @@ def get_address_postcode_key(postcode, token):
 
 def get_uprn(house_number, street, postcode):
     uprn_results = requests.get(
-        f"https://api.propertydata.co.uk/uprns?key={config.property_data_api_key}&postcode={postcode}")
+        f"https://api.propertydata.co.uk/uprns?key=XODZRGS1DI&postcode={postcode}")
     if uprn_results.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if uprn_results.json()["code"] == "X14":
             time.sleep(11)
             uprn_results = requests.get(
-                f"https://api.propertydata.co.uk/uprns?key={config.property_data_api_key}&postcode={postcode}")
+                f"https://api.propertydata.co.uk/uprns?key=XODZRGS1DI&postcode={postcode}")
             if uprn_results.json()["status"] == "error":
                 return {}
         else:
@@ -178,7 +178,7 @@ def get_air_polution(lon, lat):
 
 def get_restaraunts(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=restaurant&key={config.google_maps_apikey}"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=restaurant&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
 
     payload = {}
     headers = {}
@@ -190,7 +190,7 @@ def get_restaraunts(lon, lat):
 
 def get_post_office(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=post_office&key={config.google_maps_apikey}"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=post_office&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
 
     payload = {}
     headers = {}
@@ -202,7 +202,7 @@ def get_post_office(lon, lat):
 
 def get_gyms(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=gym&key={config.google_maps_apikey}"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=gym&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
 
     payload = {}
     headers = {}
@@ -214,7 +214,7 @@ def get_gyms(lon, lat):
 
 def get_airport(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=airport&key={config.google_maps_apikey}"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=airport&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
 
     payload = {}
     headers = {}
@@ -226,7 +226,7 @@ def get_airport(lon, lat):
 
 def get_supermarkets(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=supermarket&key={config.google_maps_apikey}"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=supermarket&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
 
     payload = {}
     headers = {}
@@ -238,7 +238,7 @@ def get_supermarkets(lon, lat):
 
 def get_cafes(lon, lat):
 
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=cafe&key={config.google_maps_apikey}"
+    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat}%2C{lon}&radius=1610&type=cafe&key=AIzaSyDBkRCuc0YSSUH3use_T6Rtu8NDauUshjo"
 
     payload = {}
     headers = {}
@@ -254,7 +254,7 @@ def get_lat_lon_opti(uprn):
     headers = {
         'content-type': "application/json",
         'accept': "application/json",
-        'authorization': f"Basic {config.geo_api_auth}=="
+        'authorization': "Basic b3B0aWJyb2tlcjpuUXJvSktHU2hGSFZKVUM4VEU2VncwdFIwMjcycjI2MQ=="
     }
 
     response = requests.request("GET", url, headers=headers)
@@ -285,7 +285,7 @@ def get_polygon_info(uprn):
     headers = {
         'content-type': "application/json",
         'accept': "application/json",
-        'authorization': f"Basic {config.geo_api_auth}=="
+        'authorization': "Basic b3B0aWJyb2tlcjpuUXJvSktHU2hGSFZKVUM4VEU2VncwdFIwMjcycjI2MQ=="
     }
 
     response = requests.request("GET", url, headers=headers)
@@ -344,13 +344,13 @@ def get_monthly_crime_rate_12_months(lon_lat):
 def get_flood_risk(postcode):
     """Get flood risk from the Flood Information Service API"""
     flood_risk = requests.get(
-        f"https://api.propertydata.co.uk/flood-risk?key={config.property_data_api_key}&postcode={postcode}")
+        f"https://api.propertydata.co.uk/flood-risk?key=XODZRGS1DI&postcode={postcode}")
     if flood_risk.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if flood_risk.json()["code"] == "X14":
             time.sleep(11)
             flood_risk = requests.get(
-                f"https://api.propertydata.co.uk/flood-risk?key={config.property_data_api_key}&postcode={postcode}")
+                f"https://api.propertydata.co.uk/flood-risk?key=XODZRGS1DI&postcode={postcode}")
             if flood_risk.json()["status"] == "error":
                 return {}
         else:
@@ -364,13 +364,13 @@ def get_flood_risk(postcode):
 def get_nearby_schools(postcode):
     """Get nearby schools from the Ofsted API"""
     nearby_schools = requests.get(
-        f"https://api.propertydata.co.uk/schools?key={config.property_data_api_key}&postcode={postcode}")
+        f"https://api.propertydata.co.uk/schools?key=XODZRGS1DI&postcode={postcode}")
     if nearby_schools.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if nearby_schools.json()["code"] == "X14":
             time.sleep(11)
             nearby_schools = requests.get(
-                f"https://api.propertydata.co.uk/schools?key={config.property_data_api_key}&postcode={postcode}")
+                f"https://api.propertydata.co.uk/schools?key=XODZRGS1DI&postcode={postcode}")
             if nearby_schools.json()["status"] == "error":
                 return {}
         else:
@@ -402,13 +402,13 @@ def get_uprn_title(uprn):
     """Get title from upr"""
 
     titles = requests.get(
-        f"https://api.propertydata.co.uk/uprn-title?key={config.property_data_api_key}&uprn={uprn}")
+        f"https://api.propertydata.co.uk/uprn-title?key=XODZRGS1DI&uprn={uprn}")
     if titles.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if titles.json()["code"] == "X14":
             time.sleep(11)
             titles = requests.get(
-                f"https://api.propertydata.co.uk/uprn-title?key={config.property_data_api_key}&uprn={uprn}")
+                f"https://api.propertydata.co.uk/uprn-title?key=XODZRGS1DI&uprn={uprn}")
             if titles.json()["status"] == "error":
                 return {}
         else:
@@ -420,14 +420,14 @@ def get_uprn_title(uprn):
 # get internet speed from propertydata.co.uk
 def get_internet_speed(postcode):
     internet_speed = requests.get(
-        f"https://api.propertydata.co.uk/internet-speed?key={config.property_data_api_key}&postcode={postcode}")
+        f"https://api.propertydata.co.uk/internet-speed?key=XODZRGS1DI&postcode={postcode}")
     # if internet_speed status is error, return error
     if internet_speed.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if internet_speed.json()["code"] == "X14":
             time.sleep(11)
             internet_speed = requests.get(
-                f"https://api.propertydata.co.uk/internet-speed?key={config.property_data_api_key}&postcode={postcode}")
+                f"https://api.propertydata.co.uk/internet-speed?key=XODZRGS1DI&postcode={postcode}")
         else:
             return "unable to get data"
     return internet_speed.json()["internet"]
@@ -437,13 +437,13 @@ def get_internet_speed(postcode):
 
 def get_council_tax_band(postcode, house_number, street):
     council_tax_band = requests.get(
-        f"https://api.propertydata.co.uk/council-tax?key={config.property_data_api_key}&postcode={postcode}")
+        f"https://api.propertydata.co.uk/council-tax?key=XODZRGS1DI&postcode={postcode}")
     if council_tax_band.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if council_tax_band.json()["code"] == "X14":
             time.sleep(11)
             council_tax_band = requests.get(
-                f"https://api.propertydata.co.uk/council-tax?key={config.property_data_api_key}&postcode={postcode}")
+                f"https://api.propertydata.co.uk/council-tax?key=XODZRGS1DI&postcode={postcode}")
         else:
             return "unable to get data"
     band_prices = council_tax_band.json()["council_tax"]
@@ -469,7 +469,7 @@ def get_council_tax_band(postcode, house_number, street):
 
 def get_epc_certs(postcode, house_number):
     headers = {
-        "Authorization": f"Basic {config.epc_auth}=",
+        "Authorization": "Basic cmFjaGFlbEBvcHRpYnJva2VyLmNvLnVrOjZkNGMzNGJmOWQxNmFhZDUxMjBmMWMyYjkyZDcxN2EzYmU5YWFhZTI=",
         "Content-Type": "application/json",
         "Accept": "application/json"
     }
@@ -479,8 +479,6 @@ def get_epc_certs(postcode, house_number):
     epc_certs = requests.get(
         f"https://epc.opendatacommunities.org/api/v1/domestic/search?postcode={postcode}&address={house_number}", headers=headers)
     print(epc_certs)
-    print(epc_certs.text)
-
 
     if epc_certs.text != None and epc_certs.text != '':
         return epc_certs.json()["rows"][0]
@@ -490,7 +488,7 @@ def get_epc_certs(postcode, house_number):
 
 def get_epc_suggestions(lmk):
     headers = {
-        "Authorization": f"Basic {config.epc_auth}=",
+        "Authorization": "Basic cmFjaGFlbEBvcHRpYnJva2VyLmNvLnVrOjZkNGMzNGJmOWQxNmFhZDUxMjBmMWMyYjkyZDcxN2EzYmU5YWFhZTI=",
         "Content-Type": "application/json",
         "Accept": "application/json"
     }
@@ -565,13 +563,13 @@ def format_postcode(postcode):
 def get_build_cost(postcode, internal_area):
     get_feet = float(internal_area)/0.0929
     build_cost = requests.get(
-        f"https://api.propertydata.co.uk/build-cost?key={config.property_data_api_key}&postcode={postcode}&internal_area={get_feet}&finish_quality=medium")
+        f"https://api.propertydata.co.uk/build-cost?key=XODZRGS1DI&postcode={postcode}&internal_area={get_feet}&finish_quality=medium")
     if build_cost.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if build_cost.json()["code"] == "X14":
             time.sleep(11)
             build_cost = requests.get(
-                f"https://api.propertydata.co.uk/build-cost?key={config.property_data_api_key}&postcode={postcode}&internal_area={get_feet}&finish_quality=medium")
+                f"https://api.propertydata.co.uk/build-cost?key=XODZRGS1DI&postcode={postcode}&internal_area={get_feet}&finish_quality=medium")
             if build_cost.json()["status"] == "error":
                 return {}
         else:
@@ -584,13 +582,13 @@ def get_build_cost(postcode, internal_area):
 def get_valuation(postcode, property_type, construction_date, internal_area, bedrooms, bathrooms, finish_quality, outdoor_space, off_street_parking):
     get_feet = float(internal_area)/0.0929
     valuation = requests.get(
-        f"https://api.propertydata.co.uk/valuation-sale?key={config.property_data_api_key}&postcode={postcode}&internal_area={get_feet}&property_type={property_type}&construction_date={construction_date}&bedrooms={bedrooms}&bathrooms={bathrooms}&finish_quality={finish_quality}&outdoor_space={outdoor_space}&off_street_parking={off_street_parking}")
+        f"https://api.propertydata.co.uk/valuation-sale?key=XODZRGS1DI&postcode={postcode}&internal_area={get_feet}&property_type={property_type}&construction_date={construction_date}&bedrooms={bedrooms}&bathrooms={bathrooms}&finish_quality={finish_quality}&outdoor_space={outdoor_space}&off_street_parking={off_street_parking}")
     if valuation.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if valuation.json()["code"] == "X14":
             time.sleep(11)
             valuation = requests.get(
-                f"https://api.propertydata.co.uk/valuation-sale?key={config.property_data_api_key}&postcode={postcode}&internal_area={get_feet}&property_type={property_type}&construction_date={construction_date}&bedrooms={bedrooms}&bathrooms={bathrooms}&finish_quality={finish_quality}&outdoor_space={outdoor_space}&off_street_parking={off_street_parking}")
+                f"https://api.propertydata.co.uk/valuation-sale?key=XODZRGS1DI&postcode={postcode}&internal_area={get_feet}&property_type={property_type}&construction_date={construction_date}&bedrooms={bedrooms}&bathrooms={bathrooms}&finish_quality={finish_quality}&outdoor_space={outdoor_space}&off_street_parking={off_street_parking}")
             if valuation.json()["status"] == "error":
                 return {}
         else:
@@ -602,13 +600,13 @@ def get_valuation(postcode, property_type, construction_date, internal_area, bed
 
 def get_planning_applications(postcode):
     planning_applications = requests.get(
-        f"https://api.propertydata.co.uk/planning?key={config.property_data_api_key}&postcode={postcode}")
+        f"https://api.propertydata.co.uk/planning?key=XODZRGS1DI&postcode={postcode}")
     if planning_applications.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if planning_applications.json()["code"] == "X14":
             time.sleep(11)
             planning_applications = requests.get(
-                f"https://api.propertydata.co.uk/planning?key={config.property_data_api_key}&postcode={postcode}")
+                f"https://api.propertydata.co.uk/planning?key=XODZRGS1DI&postcode={postcode}")
             if planning_applications.json()["status"] == "error":
                 return {}
         else:
@@ -618,13 +616,13 @@ def get_planning_applications(postcode):
 
 def get_rent_data(postcode, bedrooms, type):
     rents = requests.get(
-        f"https://api.propertydata.co.uk/rents?key={config.property_data_api_key}&postcode={postcode}&bedrooms={bedrooms}&type={type}")
+        f"https://api.propertydata.co.uk/rents?key=XODZRGS1DI&postcode={postcode}&bedrooms={bedrooms}&type={type}")
     if rents.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if rents.json()["code"] == "X14":
             time.sleep(11)
             rents = requests.get(
-                f"https://api.propertydata.co.uk/rents?key={config.property_data_api_key}&postcode={postcode}&bedrooms={bedrooms}&type={type}")
+                f"https://api.propertydata.co.uk/rents?key=XODZRGS1DI&postcode={postcode}&bedrooms={bedrooms}&type={type}")
             if rents.json()["status"] == "error":
                 return {}
         else:
@@ -634,14 +632,14 @@ def get_rent_data(postcode, bedrooms, type):
 
 def get_rent_demand_data(postcode):
     rents = requests.get(
-        f"https://api.propertydata.co.uk/demand-rent?key={config.property_data_api_key}&postcode={postcode}")
+        f"https://api.propertydata.co.uk/demand-rent?key=XODZRGS1DI&postcode={postcode}")
 
     if rents.json()["status"] == "error":
         # if error code is X14 wait 3 seconds and try again
         if rents.json()["code"] == "X14":
             time.sleep(11)
             rents = requests.get(
-                f"https://api.propertydata.co.uk/demand-rent?key={config.property_data_api_key}&postcode={postcode}")
+                f"https://api.propertydata.co.uk/demand-rent?key=XODZRGS1DI&postcode={postcode}")
             if rents.json()["status"] == "error":
                 return {}
         else:
@@ -652,7 +650,7 @@ def get_rent_demand_data(postcode):
 def get_bus_stops_and_tube_stations(lon, lat):
 
     resp = requests.get(
-        f"http://transportapi.com/v3/uk/places.json?app_id=416ad2d6&app_key={config.property_data_api_key}&lon={lon}&lat={lat}&type=bus_stop,tube_station")
+        f"http://transportapi.com/v3/uk/places.json?app_id=416ad2d6&app_key=643100371cd4778b5043402b9a386cd1&lon={lon}&lat={lat}&type=bus_stop,tube_station")
     get_json = resp.json()
 
     new_list = []
@@ -664,7 +662,7 @@ def get_bus_stops_and_tube_stations(lon, lat):
 
 def get_train_stations(lon, lat):
     resp = requests.get(
-        f"http://transportapi.com/v3/uk/places.json?app_id=416ad2d6&app_key={config.transport_api_key}&lon={lon}&lat={lat}&type=train_station")
+        f"http://transportapi.com/v3/uk/places.json?app_id=416ad2d6&app_key=643100371cd4778b5043402b9a386cd1&lon={lon}&lat={lat}&type=train_station")
     get_json = resp.json()
     new_list = []
     for stop in get_json.get('member', []):
@@ -680,7 +678,7 @@ def get_dentist_services(lon, lat):
         url=f'https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=postcode&latitude={lat}&longitude={lon}',
         headers={
             "Content-Type": "application/json",
-            "subscription-key": f"{config.nhs_api_key}"
+            "subscription-key": "6119e467dd894e70b6627524ab9d09e9"
         },
         data=u'''
         {
@@ -703,7 +701,7 @@ def get_gp_services(lon, lat):
         url=f'https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=postcode&latitude={lat}&longitude={lon}',
         headers={
             "Content-Type": "application/json",
-            "subscription-key": f"{config.nhs_api_key}"
+            "subscription-key": "6119e467dd894e70b6627524ab9d09e9"
         },
         data=u'''
         {

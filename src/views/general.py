@@ -108,7 +108,7 @@ def get_property_info():
     post_offcies = property_information.get_post_office(lon, lat)
     restaraunts = property_information.get_restaraunts(lon, lat)
     get_polygon_info = property_information.get_polygon_info(uprn)
-    print(get_polygon_info)
+
     get_build_cost = {}
     if epc_data != {}:
         get_build_cost = property_information.get_build_cost(
@@ -358,7 +358,7 @@ def get_lon_latmm():
 
         # if get_key != '':
 
-        getuprn = property_information.get_uprn(house_number, street, postcode)
+        getuprn = getuprn.get_uprn(house_number, street, postcode)
 
         if getuprn is not None:
 
@@ -417,7 +417,7 @@ def get_gi_risk():
         #                     else:
         #                         if 'key' in member:
         #                             get_key=member['key']
-        getuprn = property_information.get_uprn(house_number, street, postcode)
+        getuprn = getuprn.get_uprn(house_number, street, postcode)
 
         if getuprn is not None:
 
